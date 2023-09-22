@@ -21,3 +21,9 @@ costs = np.column_stack(([3, 2, 1, 3],
 mean_costs = np.mean(costs[:,0])
 print(mean_costs)
 
+print("\n --------------------------------------------------------------\n ")
+
+# import numpy as np
+x = np.array([6 ,4, 5, 7])
+y = np.array([5, 1, 8, 7])
+print(np.corrcoef(x, y))
