@@ -11,3 +11,13 @@ print("x.count(x[0]) would be:", x.count(x[0]))
 # 'x.count(x[0])' is '1'
 x.index(x.count(x[0]))
 print("x.index(x.count(x[0])) would be:", x.index(x.count(x[0])))
+
+print("\n --------------------------------------------------------------\n ")
+
+# Find the mean of the first column of costs
+import numpy as np
+costs = np.column_stack(([3, 2, 1, 3],
+                         [7, 6, 6, 5]))
+mean_costs = np.mean(costs[:,0])
+print(mean_costs)
+
