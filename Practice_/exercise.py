@@ -29,7 +29,10 @@ pi_string = "3.1415926"
 # Convert pi_string into float: pi_float
 pi_float = float(pi_string)
 
+print("\n-------------------------------------------------\n")
 
-print("-------------------------------------------------")
 
-print("the correct", 2)
+import numpy as np
+m = np.array([6, 2, 4])
+n = 2
+print(m + n)
