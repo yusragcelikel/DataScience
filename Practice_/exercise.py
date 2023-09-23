@@ -36,3 +36,10 @@ import numpy as np
 m = np.array([6, 2, 4])
 n = 2
 print(m + n)
+
+print("\n-------------------------------------------------\n")
+
+import numpy as np
+np_arr1 = np.array([1,2,3,4])
+np_arr2 = np.array([5,6,7,8])
+print(np.column_stack((np_arr1, np_arr2)))
