@@ -9,3 +9,4 @@ wait_times = uniform.rvs(0, 30, size=1000)
 
 plt.hist(wait_times)
 plt.show()
+
