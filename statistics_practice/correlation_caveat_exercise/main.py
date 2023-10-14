@@ -3,16 +3,25 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-world_happiness_2019 = pd.read_csv("/Users/yusragokcecelikel/Downloads/archive/2019.csv")
+mammal_sleep_data = pd.read_csv("/Users/yusragokcecelikel/Downloads/msleep.csv")
 
-#print(world_happiness_2019.columns)
+#print(mammal_sleep_data.columns)
 
 # visualize your data
-sns.scatterplot(x="Perceptions of corruption", y="GDP per capita", data=world_happiness_2019)
+sns.scatterplot(x="bodywt", y="awake", data=mammal_sleep_data)
 plt.show()
 
-cor1 = world_happiness_2019["Perceptions of corruption"].corr(world_happiness_2019["GDP per capita"])
+cor1 = mammal_sleep_data["bodywt"].corr(mammal_sleep_data["awake"])
 print(cor1)
 
 
+# perform log transformation to make your data more linear
+mammal_sleep_data["log_bodywt"] = np.log(mammal_sleep_data["bodywt"])
 
+# review the scatter plot of transformed data
+sns.scatterplot(x="log_bodywt", y="awake", data=mammal_sleep_data)
+plt.show()
+
+# see the correlation of transformed data
+cor2 = mammal_sleep_data["log_bodywt"].corr(mammal_sleep_data["awake"])
+print(cor2)
