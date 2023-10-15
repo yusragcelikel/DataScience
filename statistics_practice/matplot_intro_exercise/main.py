@@ -22,7 +22,11 @@ fig, ax = plt.subplots()
 
 # add two data to axes
 ax.plot(seattle_weather["MONTH"], seattle_weather["MLY_TAVG_NORMAL"], color="b", marker="o", linestyle="--")
-ax.plot(austin_weather["MONTH"], austin_weather["MLY_TAVG_NORMAL"], color="r", marker="v", linestyle="--")
+#ax.plot(austin_weather["MONTH"], austin_weather["MLY_TAVG_NORMAL"], color="r", marker="v", linestyle="--")
+
+ax.set_xlabel("Time (months)")
+ax.set_ylabel("Average temperature (Fahrenheit degrees)")
+ax.set_title("Weather in Seattle")
 
 # show the plot
 plt.show()
