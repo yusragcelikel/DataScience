@@ -21,8 +21,8 @@ fig, ax = plt.subplots()
 
 
 # add two data to axes
-ax.plot(seattle_weather["MONTH"], seattle_weather["MLY_TAVG_NORMAL"], color="b")
-ax.plot(austin_weather["MONTH"], austin_weather["MLY_TAVG_NORMAL"], color="r")
+ax.plot(seattle_weather["MONTH"], seattle_weather["MLY_TAVG_NORMAL"], color="b", marker="o", linestyle="--")
+ax.plot(austin_weather["MONTH"], austin_weather["MLY_TAVG_NORMAL"], color="r", marker="v", linestyle="--")
 
 # show the plot
 plt.show()
