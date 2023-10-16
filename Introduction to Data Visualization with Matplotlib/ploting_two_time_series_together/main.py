@@ -7,18 +7,18 @@ ninety_eight = climate_change["1998-01-01" : "1998-12-31"]
 
 fig, ax = plt.subplots()
 
-ax.plot(climate_change.index, climate_change["co2"])
+ax.plot(climate_change.index, climate_change["co2"], color="red")
 #ax.plot(ninety_eight.index, ninety_eight["co2"])
 
 ax.set_xlabel("Time")
-ax.set_ylabel("CO2 (ppm)")
+ax.set_ylabel("CO2 (ppm)", color="red")
 
 #define ax2
 ax2 = ax.twinx()
 
-ax2.plot(climate_change.index, climate_change["relative_temp"])
+ax2.plot(climate_change.index, climate_change["relative_temp"], color="blue")
 
 # Since same x-axes different y-axes
-ax2.set_ylabel("Relative temperature (Celsius)")
+ax2.set_ylabel("Relative temperature (Celsius)", color="blue")
 
 plt.show()
