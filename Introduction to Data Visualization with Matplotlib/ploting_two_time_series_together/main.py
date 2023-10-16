@@ -12,6 +12,7 @@ ax.plot(climate_change.index, climate_change["co2"], color="red")
 
 ax.set_xlabel("Time")
 ax.set_ylabel("CO2 (ppm)", color="red")
+ax.tick_params("y", colors="red")
 
 #define ax2
 ax2 = ax.twinx()
@@ -20,5 +21,6 @@ ax2.plot(climate_change.index, climate_change["relative_temp"], color="blue")
 
 # Since same x-axes different y-axes
 ax2.set_ylabel("Relative temperature (Celsius)", color="blue")
+ax2.tick_params("y", colors="blue")
 
 plt.show()
