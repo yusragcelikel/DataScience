@@ -8,16 +8,19 @@ medals = pd.read_csv("/Users/yusragokcecelikel/Downloads/CSV files/8. Introducti
 fig, ax = plt.subplots()
 
 #call the Axes bar method to create a bar chart and visualize the data about gold medals
-ax.bar(medals.index, medals["Gold"])
+ax.bar(medals.index, medals["Gold"], label="Gold")
 # Stack the Silver data on top of the gold data
-ax.bar(medals.index, medals["Silver"], bottom=medals["Gold"])
+ax.bar(medals.index, medals["Silver"], bottom=medals["Gold"], label="Silver")
 # Stack the bronze data on top of both the gold data and the silver
-ax.bar(medals.index, medals["Bronze"], bottom=medals["Gold"] + medals["Silver"])
+ax.bar(medals.index, medals["Bronze"], bottom=medals["Gold"] + medals["Silver"], label="Bronze")
 
 #Rotate the x-axis labels to prevent overlapping
 ax.set_xticklabels(medals.index, rotation=90)
 # add label to y-axis
 ax.set_ylabel("Number of medals")
+
+# Show which data corresponds to which label
+ax.legend()
 
 # Adjust figure margins to make sure labels fit within the plot
 plt.tight_layout()
