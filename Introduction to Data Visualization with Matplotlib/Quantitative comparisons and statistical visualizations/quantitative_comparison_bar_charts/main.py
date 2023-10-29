@@ -9,5 +9,9 @@ fig, ax = plt.subplots()
 
 #call the Axes bar method to create a bar chart and visualize the data about gold medals
 ax.bar(medals.index, medals["Gold"])
+#Rotate the x-axis labels to prevent overlapping
+ax.set_xticklabels(medals.index, rotation=90)
+# add label to y-axis
+ax.set_ylabel("Number of medals")
 
 plt.show()
