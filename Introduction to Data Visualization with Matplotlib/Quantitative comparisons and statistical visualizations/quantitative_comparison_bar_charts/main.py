@@ -14,4 +14,8 @@ ax.set_xticklabels(medals.index, rotation=90)
 # add label to y-axis
 ax.set_ylabel("Number of medals")
 
+# Adjust figure margins to make sure labels fit within the plot
+plt.tight_layout()
+
+# Display the plot
 plt.show()
