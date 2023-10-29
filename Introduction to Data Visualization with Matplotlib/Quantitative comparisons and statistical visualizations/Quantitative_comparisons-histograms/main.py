@@ -8,8 +8,8 @@ mens_gymnastics = medalist_weights[(medalist_weights["Sex"] == "M") & (medalist_
 
 fig, ax = plt.subplots()
 
-ax.hist(mens_rowing["Height"], label="Rowing")
-ax.hist(mens_gymnastics["Height"], label="Gymnastics")
+ax.hist(mens_rowing["Height"], label="Rowing", bins=[150, 160, 170, 180, 190, 200, 210])
+ax.hist(mens_gymnastics["Height"], label="Gymnastics", bins=[150, 160, 170, 180, 190, 200, 210])
 
 ax.set_xlabel("Height (cm)")
 ax.set_ylabel("Number of observations")
