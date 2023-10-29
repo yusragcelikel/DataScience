@@ -11,6 +11,9 @@ fig, ax = plt.subplots()
 ax.bar(medals.index, medals["Gold"])
 # Stack the Silver data on top of the gold data
 ax.bar(medals.index, medals["Silver"], bottom=medals["Gold"])
+# Stack the bronze data on top of both the gold data and the silver
+ax.bar(medals.index, medals["Bronze"], bottom=medals["Gold"] + medals["Silver"])
+
 #Rotate the x-axis labels to prevent overlapping
 ax.set_xticklabels(medals.index, rotation=90)
 # add label to y-axis
