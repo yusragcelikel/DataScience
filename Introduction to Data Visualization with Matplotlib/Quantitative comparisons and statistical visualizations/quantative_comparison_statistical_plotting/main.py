@@ -11,7 +11,7 @@ mens_rowing = medalist_weights[(medalist_weights["Sex"] == "M") & (medalist_weig
 mens_gymnastics = medalist_weights[(medalist_weights["Sex"] == "M") & (medalist_weights["Sport"] == "Gymnastics")]
 
 
-
+# errorbar
 fig1, ax1 = plt.subplots()
 
 ax1.errorbar(seattle_weather_first_twelve["DATE"], seattle_weather_first_twelve["MLY-TAVG-NORMAL"], yerr=seattle_weather_first_twelve["MLY-TAVG-STDDEV"])
@@ -20,9 +20,15 @@ ax1.errorbar(austin_weather["DATE"], austin_weather["MLY-TAVG-NORMAL"], yerr=aus
 ax1.set_ylabel("Temperature (Fahrenheit)")
 plt.show()
 
+# boxplot
+fig2, ax2 = plt.subplots()
 
+ax2.boxplot([mens_rowing["Height"], mens_gymnastics["Height"]])
 
+ax2.set_xticklabels(["Rowing", "Gymnastics"])
+ax2.set_ylabel("Height (CM)")
 
+plt.show()
 
 
 
