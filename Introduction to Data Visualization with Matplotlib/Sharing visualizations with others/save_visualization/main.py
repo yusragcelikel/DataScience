@@ -10,7 +10,7 @@ ax.bar(medals.index, medals["Gold"])
 ax.set_xticklabels(medals.index, rotation=90)
 ax.set_ylabel("Number of medals")
 
-
+fig.set_size_inches([5, 4])
 
 #lfig.savefig("gold_medals.jpg", quality=50)
 
